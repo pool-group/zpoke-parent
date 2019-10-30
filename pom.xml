@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.zren.platform</groupId>
+  <artifactId>game-bout-parent</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>game-bout-parent</name>
+  <url>http://maven.apache.org</url>
+
+  <parent>
+    <groupId>com.zren.platform</groupId>
+    <artifactId>zren-platform-parent</artifactId>
+    <version>1.0.6</version>
+  </parent>
+
+  <modules>
+    <module>game-zpoke-parent</module>
+    <module>game-zjh</module>
+    <module>game-bout-common</module>
+  </modules>
+
+  <properties>
+      <game.center.api.version>1.0-SNAPSHOT</game.center.api.version>
+      <balance-game.version>1.0-SNAPSHOT</balance-game.version>
+      <game-dao-cardgame.version>1.0-SNAPSHOT</game-dao-cardgame.version>
+      <game-api-common.version>1.0-SNAPSHOT</game-api-common.version>
+      <common-service-facade.version>1.0-SNAPSHOT</common-service-facade.version>
+  </properties>
+
+  <dependencies>
+     <!--Log Management-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-sleuth</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>net.logstash.logback</groupId>
+      <artifactId>logstash-logback-encoder</artifactId>
+    </dependency>
+
+    <!-- spring boot  registry and discovery-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-openfeign</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+    </dependency>
+  </dependencies>
+</project>
